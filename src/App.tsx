@@ -1,11 +1,10 @@
-
-import './App.css'
+import './Styles/Global.css';
 
 function App() {
 
   return (
-    <div className="App">
-
+    <div className="w-screen h-screen flex justify-center items-center bg-background">
+     PORTIFOLIO MTO MASSA
     </div>
   )
 }
