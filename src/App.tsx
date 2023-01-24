@@ -1,11 +1,19 @@
-import './Styles/Global.css';
+import { Button, Flex, Text, useColorMode } from '@chakra-ui/react'
 
 function App() {
 
+  const {colorMode, toggleColorMode} = useColorMode()
+
   return (
-    <div className="w-screen h-screen flex justify-center items-center bg-background">
-     PORTIFOLIO MTO MASSA
-    </div>
+    <Flex bgColor='uaifi' fontFamily="body">
+      <Text fontSize={100} fontWeight='bold'>
+        ai papai funcionou
+      </Text>
+      <Button onClick={toggleColorMode}>
+        toggle
+      </Button>
+    </Flex>
+
   )
 }
 
