@@ -10,11 +10,18 @@ const config: ThemeConfig = {
   useSystemColorMode: true,
 };
 
+
 export const theme = extendTheme({
   config,
 
   colors: {
-    verdinLight: "#BFDB38",
-    verdinDark: "#00425A",
+    // Light mode
+    background: '#FFFFFF',
+    txtdistact: '#C85022',
+    
+    // Dark mode
+    
+    dbackground: '#0A0A0A',
+    dtxtdistact: '#d62828',
   },
 });
