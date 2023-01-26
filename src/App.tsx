@@ -13,14 +13,12 @@ function App() {
       maxW='none'
       minH='100vh'
       w='100%'
-      whiteSpace='nowrap'
-      overflow='hidden'
       fontWeight='bold'
       style={{ fontFamily: 'Plus jakarta sans' }}
       bgColor={BG}
     >
-    <AboutMeSection/>
-   <Button onClick={toggleColorMode}>change</Button>
+      <Button onClick={toggleColorMode}>change</Button>
+      <AboutMeSection />
     </Container>
   )
 }
