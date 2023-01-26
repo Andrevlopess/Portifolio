@@ -7,6 +7,8 @@ export function AboutMeSection() {
 
     return (
         <Flex w='100%' justifyContent='center' flexDirection='column' alignItems='center'>
+
+            
         </Flex>
     )
 }
