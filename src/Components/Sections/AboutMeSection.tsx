@@ -5,10 +5,11 @@ export function AboutMeSection() {
         <Flex w='100%' mt='100px' flexDirection='column' justifyContent='center' alignItems='center' mb='100px'>
             <Flex w='100%' justifyContent='flex-end'>
                 <Text
-                    fontSize='10em'
+                    fontSize='12em'
                     color='txtDistact'
                     bgGradient='linear(to-r, violet300, violet200, violet100)'
                     bgClip='text'
+                    mr='-40px'
                 >About me</Text>
             </Flex>
             <Flex w='80%' justifyContent='center' alignItems='center' mt='50px' flexDirection='column'>

@@ -1,0 +1,47 @@
+
+
+const FirebaseSVG = () => {
+    return (
+        <svg width="152" height="215" viewBox="0 0 152 215" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M1.74601 173.24L2.98294 171.425L61.3146 55.2236L61.4324 53.9961L35.1605 3.57429C32.9583 -0.649301 26.8326 0.455747 26.1445 5.20141L1.74601 173.24Z" fill="#FFC24A" />
+            <path d="M2.47334 171.856L3.40551 169.947L61.1266 54.9626L34.9176 4.3349C32.7397 0.155571 27.273 1.25453 26.5917 5.95028L2.47334 171.856Z" fill="#FFA712" />
+            <g filter="url(#filter0_i_53_28)">
+                <path d="M2.47334 171.856L3.40551 169.947L61.1266 54.9626L34.9176 4.3349C32.7397 0.155571 27.273 1.25453 26.5917 5.95028L2.47334 171.856Z" fill="#FFC24A" />
+            </g>
+            <path d="M80.5925 92.1389L99.8346 71.5042L80.2634 33.336C78.4058 29.723 73.2744 29.7404 71.476 33.3846L61.244 53.8703L61.2535 55.6098L80.592 92.1389L80.5925 92.1389Z" fill="#F4BD62" />
+            <path d="M80.2423 91.2857L98.9495 71.2244L79.9286 34.2228C78.1226 30.7105 73.7798 30.3654 72.0314 33.9077L61.747 54.7112L61.4416 55.7736L80.2423 91.2857V91.2857Z" fill="#FFA50E" />
+            <g filter="url(#filter1_i_53_28)">
+                <path d="M80.2423 91.2857L98.9495 71.2244L79.9286 34.2228C78.1226 30.7105 73.7798 30.3654 72.0314 33.9077L61.747 54.7112L61.4416 55.7736L80.2423 91.2857V91.2857Z" fill="#FFA712" />
+            </g>
+            <path d="M1.74554 173.24L2.3073 172.648L4.35581 171.773L79.3842 93.5024L80.3255 90.802L61.2979 53.7597L1.74554 173.24Z" fill="#F6820C" />
+            <path d="M83.6689 212.049L151.742 172.23L131.557 47.9592C130.926 44.0712 126.307 42.5585 123.633 45.3633L1.74538 173.239L69.8594 212.123C71.9766 213.331 74.3569 213.959 76.774 213.946C79.1911 213.933 81.5647 213.28 83.6689 212.049Z" fill="#FDE068" />
+            <path d="M151.128 171.903L131.096 48.576C130.47 44.7172 126.627 43.1406 123.973 45.9246L2.50153 172.994L69.8681 211.492C71.9691 212.691 74.3313 213.314 76.73 213.302C79.1287 213.289 81.4842 212.641 83.5725 211.42L151.129 171.902L151.128 171.903Z" fill="#FCCA3F" />
+            <path d="M83.6618 210.888C81.5577 212.119 79.1842 212.772 76.7672 212.784C74.3502 212.797 71.97 212.17 69.8529 210.961L2.28877 172.639L1.74585 173.24L69.8593 212.123C71.9765 213.332 74.3568 213.96 76.7739 213.947C79.191 213.934 81.5646 213.281 83.6688 212.05L151.742 172.23L151.569 171.166L83.6624 210.888L83.6618 210.888Z" fill="#EEAB37" />
+            <defs>
+                <filter id="filter0_i_53_28" x="2.47339" y="1.7373" width="58.6533" height="170.119" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset />
+                    <feGaussianBlur stdDeviation="124.619" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.06 0" />
+                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_53_28" />
+                </filter>
+                <filter id="filter1_i_53_28" x="61.4417" y="-18.4336" width="44.6289" height="109.719" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                    <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha" />
+                    <feOffset dx="7.12109" dy="-64.0898" />
+                    <feGaussianBlur stdDeviation="24.9238" />
+                    <feComposite in2="hardAlpha" operator="arithmetic" k2="-1" k3="1" />
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.09 0" />
+                    <feBlend mode="normal" in2="shape" result="effect1_innerShadow_53_28" />
+                </filter>
+            </defs>
+        </svg>
+
+    )
+}
+
+export default FirebaseSVG

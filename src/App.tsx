@@ -4,6 +4,8 @@ import { AboutMeSection } from './Components/Sections/AboutMeSection';
 import IntroductionSec from './Components/Sections/IntroductionSec';
 import ScrollDown from './Components/ScrollDown';
 import Cursor from './Components/Cursor';
+import SkillsSection from './Components/Sections/SkillsSection';
+import './Styles/Global.css'
 
 function App() {
 
@@ -11,8 +13,9 @@ function App() {
     <Container
       maxW='none'
       w='100%'
+      overflow='hidden'
       fontWeight='bold'
-      style={{ fontFamily: 'Plus jakarta sans', cursor: 'none' }}
+      style={{ fontFamily: 'Plus jakarta sans', cursor: 'none', scrollBehavior: 'smooth'}}
       bgColor='background'
       minH='100vh'
     >
@@ -23,6 +26,8 @@ function App() {
         <ScrollDown />
         <AboutMeSection />
         <ScrollDown />
+        <SkillsSection />
+
       </Flex>
       <Flex h='100vh'></Flex>
     </Container>
