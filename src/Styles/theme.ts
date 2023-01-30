@@ -15,13 +15,8 @@ export const theme = extendTheme({
   config,
 
   colors: {
-    // Light mode
-    background: '#FFFFFF',
-    txtdistact: '#C85022',
-    
-    // Dark mode
-    
-    dbackground: '#0A0A0A',
-    dtxtdistact: '#d62828',
+    background: '#0B0B0B',
+    distactBg: '#f1f1f1',
+    txtDistact: '#872dcb',
   },
 });

@@ -1,24 +1,30 @@
 import { Box, Button, Container, Flex, Text, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import { useEffect, useState } from 'react';
 import { AboutMeSection } from './Components/AboutMeSection';
+import IntroductionSec from './Components/IntroductionSec';
+import ScrollDown from './Components/ScrollDown';
+import './Styles/Global.css'
+import "./Styles/scrollIconAnimation.css"
+import { motion } from 'framer-motion';
+import Cursor from './Components/Cursor';
 
 function App() {
-
-  const { colorMode, toggleColorMode } = useColorMode()
-
-  const BG = useColorModeValue('background', 'dbackground')
 
   return (
     <Container
       maxW='none'
-      minH='100vh'
       w='100%'
       fontWeight='bold'
-      style={{ fontFamily: 'Plus jakarta sans' }}
-      bgColor={BG}
+      style={{ fontFamily: 'Plus jakarta sans', cursor: 'none' }}
+      bgColor='background'
+      minH='100vh'
     >
-      <Button onClick={toggleColorMode}>change</Button>
-      <AboutMeSection />
+      <Cursor />
+      <Flex w='100%' justifyContent='center' alignItems='center' flexDirection='column'>
+        <IntroductionSec />
+        <ScrollDown />
+      </Flex>
+      <Flex h='100vh'></Flex>
     </Container>
   )
 }
