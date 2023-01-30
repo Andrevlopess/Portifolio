@@ -6,6 +6,7 @@ import ScrollDown from './Components/ScrollDown';
 import Cursor from './Components/Cursor';
 import SkillsSection from './Components/Sections/SkillsSection';
 import './Styles/Global.css'
+import ProjectsSec from './Components/Sections/ProjectsSec';
 
 function App() {
 
@@ -27,7 +28,7 @@ function App() {
         <AboutMeSection />
         <ScrollDown />
         <SkillsSection />
-
+        <ProjectsSec/>
       </Flex>
       <Flex h='100vh'></Flex>
     </Container>
