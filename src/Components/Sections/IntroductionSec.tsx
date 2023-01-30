@@ -1,5 +1,5 @@
 import { Flex, Highlight, Image, Text } from "@chakra-ui/react"
-import eu from '../Images/andrevlopes.jpeg'
+import eu from '../../Images/andrevlopes.jpeg'
 
 const IntroductionSec = () => {
 

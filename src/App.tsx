@@ -1,11 +1,8 @@
 import { Box, Button, Container, Flex, Text, useColorMode, useColorModeValue } from '@chakra-ui/react'
 import { useEffect, useState } from 'react';
-import { AboutMeSection } from './Components/AboutMeSection';
-import IntroductionSec from './Components/IntroductionSec';
+import { AboutMeSection } from './Components/Sections/AboutMeSection';
+import IntroductionSec from './Components/Sections/IntroductionSec';
 import ScrollDown from './Components/ScrollDown';
-import './Styles/Global.css'
-import "./Styles/scrollIconAnimation.css"
-import { motion } from 'framer-motion';
 import Cursor from './Components/Cursor';
 
 function App() {
@@ -20,8 +17,11 @@ function App() {
       minH='100vh'
     >
       <Cursor />
+
       <Flex w='100%' justifyContent='center' alignItems='center' flexDirection='column'>
         <IntroductionSec />
+        <ScrollDown />
+        <AboutMeSection />
         <ScrollDown />
       </Flex>
       <Flex h='100vh'></Flex>
