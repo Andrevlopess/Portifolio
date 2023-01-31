@@ -1,4 +1,4 @@
-import { Flex, GridItem, SimpleGrid, Text } from "@chakra-ui/react"
+import { Flex, GridItem, Image, SimpleGrid, Text } from "@chakra-ui/react"
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import TypeTodoBanner from '../../Images/TypeTodoBanner.png'
@@ -61,21 +61,24 @@ const ProjectsSec = () => {
                     mr='-40px'>Projects</Text>
             </Flex>
 
-            <SimpleGrid columns={1} spacing={10} w='80%'>
+            <Flex w='80%' flexDirection='column' justifyContent='center' my='100px'>
                 {
                     projects.map(project => {
                         return (
                             <motion.div
-                             
                             >
-                                <Flex w='100%' h='50vh' bgImage={project.banner} bgSize='cover' borderRadius='10px' >
+                                <Flex w='100%' my='25px'>
+                                    <Image src={project.banner} />
                                 </Flex>
                             </motion.div>
                         )
                     })
                 }
+            </Flex>
 
-            </SimpleGrid>
+
+
+
         </Flex>
     )
 }

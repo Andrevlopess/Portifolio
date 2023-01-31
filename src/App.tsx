@@ -9,6 +9,8 @@ import ProjectsSec from './Components/Sections/ProjectsSec';
 
 function App() {
 
+  const [cursorPointer, setCursorPointer] = useState(false)
+
   return (
     <Container
       maxW='none'
@@ -19,11 +21,11 @@ function App() {
       bgColor='background'
       minH='100vh'
     >
-      <Cursor />
+      <Cursor  pointer={cursorPointer}/>
 
       <Flex w='100%' justifyContent='center' alignItems='center' flexDirection='column'>
         <IntroductionSec />
-        <ScrollDown />
+        <ScrollDown/>
         <AboutMeSection />
         <ScrollDown />
         <SkillsSection />
