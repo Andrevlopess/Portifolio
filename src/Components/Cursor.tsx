@@ -39,7 +39,8 @@ const Cursor = () => {
                 width: '32px',
                 position: 'fixed',
                 border: '5px solid #6e01c0',
-                borderRadius: '50%'
+                borderRadius: '50%',
+                zIndex: 9999,
             }}
             variants={variants} animate="default" />
     )
