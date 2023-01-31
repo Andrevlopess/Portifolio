@@ -4,8 +4,7 @@ import { AboutMeSection } from './Components/Sections/AboutMeSection';
 import IntroductionSec from './Components/Sections/IntroductionSec';
 import ScrollDown from './Components/ScrollDown';
 import Cursor from './Components/Cursor';
-import SkillsSection from './Components/Sections/SkillsSection';
-import './Styles/Global.css'
+import SkillsSection from './Components/Sections/SkillsSection'; 
 import ProjectsSec from './Components/Sections/ProjectsSec';
 
 function App() {
