@@ -21,7 +21,7 @@ function App() {
       bgColor='background'
       minH='100vh'
     >
-      <Cursor  pointer={cursorPointer}/>
+      <Cursor pointer={cursorPointer}/>
 
       <Flex w='100%' justifyContent='center' alignItems='center' flexDirection='column'>
         <IntroductionSec />
@@ -29,7 +29,7 @@ function App() {
         <AboutMeSection />
         <ScrollDown />
         <SkillsSection />
-        <ProjectsSec/>
+        <ProjectsSec setPointer={setCursorPointer}/>
       </Flex>
       <Flex h='100vh'></Flex>
     </Container>

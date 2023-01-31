@@ -6,7 +6,10 @@ import GymNationBanner from '../../Images/GymNationBanner.png'
 import NlwSetupBanner from '../../Images/NlwSetup.png'
 import BarDoZéBanner from '../../Images/BarDoZéBanner.png'
 
-const ProjectsSec = () => {
+interface ProjectsProps {
+    setPointer: (arg: boolean) => void
+}
+const ProjectsSec = ({ setPointer }: ProjectsProps) => {
 
     interface Iproject {
         title: string;
@@ -61,13 +64,19 @@ const ProjectsSec = () => {
                     mr='-40px'>Projects</Text>
             </Flex>
 
-            <Flex w='80%' flexDirection='column' justifyContent='center' my='100px'>
+            <Flex w='80%' flexDirection='column' justifyContent='center' my='100px' 
+            >
                 {
                     projects.map(project => {
                         return (
                             <motion.div
+                                onMouseEnter={() => setPointer(true)}
+                                onMouseLeave={() => setPointer(false)}
                             >
-                                <Flex w='100%' my='25px'>
+                                <Flex w='100%' my='25px'
+
+                                >
+
                                     <Image src={project.banner} />
                                 </Flex>
                             </motion.div>

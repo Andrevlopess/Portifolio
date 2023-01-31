@@ -42,14 +42,13 @@ const Cursor = ({ pointer }: CursorProps) => {
 
         <>
             {pointer ?
-
                 <motion.div
                     style={{
                         height: '32px',
                         width: '32px',
                         position: 'fixed',
                         border: '5px solid #6e01c0',
-                        borderRadius: '50%',
+                        
                         zIndex: 9999,
                     }}
                     variants={variants} animate="default" />
@@ -59,6 +58,7 @@ const Cursor = ({ pointer }: CursorProps) => {
                         height: '32px',
                         width: '32px',
                         position: 'fixed',
+                        borderRadius: '50%',
                         border: '5px solid #6e01c0',
                         zIndex: 9999,
                     }}
