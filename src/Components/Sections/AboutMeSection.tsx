@@ -6,7 +6,7 @@ export function AboutMeSection() {
         <Flex w='100%' mt='100px' flexDirection='column' justifyContent='center' alignItems='center' mb='100px'>
             <Flex w='100%' justifyContent='flex-end'>
                 <motion.div
-                    initial={{ x: 500, opacity: 0 }}
+                    initial={{ x: 100, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
                     transition={{ ease: "easeOut", duration: 1 }}
                     viewport={{ once: true }}>
@@ -25,7 +25,8 @@ export function AboutMeSection() {
                     <motion.text
                         initial={{ opacity: 0 }}
                         whileInView={{ opacity: 1 }}
-                        transition={{ ease: "easeOut", duration: 2 }}>
+                        transition={{ ease: "easeOut", duration: 2 }}
+                        viewport={{once: true}}>
                         <Highlight query='Frontend focused Web Developer' styles={{ color: 'violet100' }}>
                             A Frontend focused Web Developer building the Frontend of Websites and Web applications that leads to the success of the overall product.
                         </Highlight>

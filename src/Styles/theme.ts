@@ -16,6 +16,7 @@ export const theme = extendTheme({
 
   colors: {
     background: '#0B0B0B',
+    bgDistinct: '#131313',
     distactBg: '#f1f1f1',
     txtDistact: '#872dcb',
     highBlue: '#1C60C7',

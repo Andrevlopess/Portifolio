@@ -14,6 +14,7 @@
     "@emotion/styled": "^11.10.5",
     "@fontsource/aldrich": "^4.5.7",
     "@fontsource/plus-jakarta-sans": "^4.5.11",
+    "@fortawesome/free-solid-svg-icons": "^6.2.1",
     "@react-three/fiber": "^8.10.1",
     "framer-motion": "^8.5.2",
     "framer-motion-3d": "^8.5.2",

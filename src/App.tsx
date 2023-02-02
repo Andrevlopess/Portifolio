@@ -9,19 +9,17 @@ import ProjectsSec from './Components/Sections/ProjectsSec';
 
 function App() {
 
-  const [cursorPointer, setCursorPointer] = useState(false)
-
+  
   return (
     <Container
       maxW='none'
       w='100%'
       overflow='hidden'
       fontWeight='bold'
-      style={{ fontFamily: 'Plus jakarta sans', cursor: 'none', scrollBehavior: 'smooth'}}
+      style={{ fontFamily: 'Plus jakarta sans', scrollBehavior: 'smooth'}}
       bgColor='background'
       minH='100vh'
     >
-      <Cursor pointer={cursorPointer}/>
 
       <Flex w='100%' justifyContent='center' alignItems='center' flexDirection='column'>
         <IntroductionSec />
@@ -29,7 +27,7 @@ function App() {
         <AboutMeSection />
         <ScrollDown />
         <SkillsSection />
-        <ProjectsSec setPointer={setCursorPointer}/>
+        <ProjectsSec/>
       </Flex>
       <Flex h='100vh'></Flex>
     </Container>
