@@ -2,12 +2,8 @@ import { Flex } from '@chakra-ui/react';
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
 
-interface CursorProps {
-    pointer: boolean;
-}
-const Cursor = ({ pointer }: CursorProps) => {
-    console.log(pointer);
 
+const Cursor = () => {
 
     const [mousePointer, setMousePointer] = useState({
         x: 0,
@@ -32,38 +28,23 @@ const Cursor = ({ pointer }: CursorProps) => {
     }, [])
 
     const variants = {
-        default: {
             x: mousePointer.x - 16,
-            y: mousePointer.y - 16
-        }
+            y: mousePointer.y - 16   
     }
 
     return (
 
         <>
-            {pointer ?
-                <motion.div
-                    style={{
-                        height: '32px',
-                        width: '32px',
-                        position: 'fixed',
-                        border: '5px solid #6e01c0',
-                        
-                        zIndex: 9999,
-                    }}
-                    variants={variants} animate="default" />
-                :
-                <motion.div
-                    style={{
-                        height: '32px',
-                        width: '32px',
-                        position: 'fixed',
-                        borderRadius: '50%',
-                        border: '5px solid #6e01c0',
-                        zIndex: 9999,
-                    }}
-                    variants={variants} animate="default" />
-            }
+            <div style={{
+                height: '32px',
+                width: '32px',
+                position: 'fixed',
+                borderRadius: '50%',
+                border: '5px solid #6e01c0',
+                zIndex: 9999,
+                top: mousePointer.y,
+                left: mousePointer.x
+            }}></div>
         </>
     )
 }
