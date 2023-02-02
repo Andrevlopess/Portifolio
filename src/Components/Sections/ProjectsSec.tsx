@@ -1,4 +1,4 @@
-import { Flex, GridItem, Image, SimpleGrid, Text } from "@chakra-ui/react"
+import { Center, Flex, GridItem, Image, Link, SimpleGrid, Text } from "@chakra-ui/react"
 import { useState } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import TypeTodoBanner from '../../Images/TypeTodoBanner.png'
@@ -6,8 +6,9 @@ import GymNationBanner from '../../Images/GymNationBanner.png'
 import NlwSetupBanner from '../../Images/NlwSetup.png'
 import BarDoZéBanner from '../../Images/BarDoZéBanner.png'
 import ProjectBg from '../../Images/ProjectsBg.svg'
-import { faArrowUp19 } from "@fortawesome/free-solid-svg-icons"
-
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { BsGithub } from 'react-icons/bs'
 const ProjectsSec = () => {
 
     interface IHover {
@@ -72,7 +73,7 @@ const ProjectsSec = () => {
 
     const item = {
         hidden: { x: 0 },
-        show: { x: -60 },
+        show: { x: -80 },
     }
 
     return (
@@ -98,7 +99,7 @@ const ProjectsSec = () => {
                                 >
 
                                     <Image src={project.banner} borderRadius='10px' transition='.4s'
-                                        opacity={hover?.projTitle === project.title && hover.state ? .5 : 1} />
+                                        opacity={hover?.projTitle === project.title && hover.state ? .4 : 1} />
 
                                     {hover?.projTitle === project.title && hover.state &&
                                         <motion.div
@@ -106,12 +107,26 @@ const ProjectsSec = () => {
                                             initial="hidden"
                                             animate="show"
                                         >
-                                            <motion.div variants={item} >
-                                                <Flex marginTop='10px' marginRight='-50px' h='50px' w='50px' borderRadius='50%' border='2px solid white'>
-                                                    <FontAwesomeIcon icon={faArrowUp19} />
-                                                </Flex>
-                                                <Flex marginTop='10px' marginRight='-50px' h='50px' w='50px' borderRadius='50%' border='2px solid white'>
-                                                </Flex>
+                                            {project.url &&
+                                                <motion.div variants={item}>
+                                                    <Center marginTop='10px' marginRight='-50px' h='65px' w='65px' borderRadius='50%' boxShadow='0 -10px 50px black' style={{
+                                                        background: 'linear-gradient(to right, #4d0484, #9240d0) border-box'
+                                                    }}>
+                                                        <Link href={project.url}>
+                                                            <FontAwesomeIcon icon={faArrowUpRightFromSquare} fontSize='20px' />
+                                                        </Link>
+                                                    </Center>
+                                                </motion.div>
+                                            }
+
+                                            <motion.div variants={item}>
+                                                <Center marginTop='10px' marginRight='-50px' h='65px' w='65px' borderRadius='50%' boxShadow='0 -10px 50px black' style={{
+                                                    background: 'linear-gradient(to right, #4d0484, #9240d0) border-box'
+                                                }}>
+                                                    <Link href={project.gitRepo}>
+                                                            <BsGithub size='35px'/>
+                                                   </Link>
+                                                </Center>
 
                                             </motion.div>
 
@@ -123,12 +138,12 @@ const ProjectsSec = () => {
                         )
                     })
                 }
-            </Flex>
+            </Flex >
 
 
 
 
-        </Flex>
+        </Flex >
     )
 }
 
