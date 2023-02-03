@@ -157,6 +157,7 @@ const ProjectsSec = () => {
                             <Flex
                                 w="100%"
                                 my="25px"
+
                             >
                                 <Image
                                     src={project.banner}
@@ -217,32 +218,21 @@ const ProjectsSec = () => {
                                             </Center>
                                         </motion.div>
 
-
-
-                                    </motion.div>
-                                )}
-
-                                <motion.div 
-                                style={{ display: 'flex', alignItems: 'flex-end' }}
-                                    variants={toolsContainer}
-                                    initial="hidden"
-                                    animate="show">
-                                    {hover?.projTitle === project.title && hover.state && project.tools && (
-                                        <Flex w='100%' >
+                                        <motion.div style={{display:'flex'}}>
                                             {project.tools?.map((tool) => {
                                                 return (
-                                                    <motion.div style={{width:'55px'}} variants={tools}>
+                                                    <motion.div style={{ width: '55px' }} variants={tools}>
                                                         <Image src={tool} key={tool} boxSize='50px'
                                                             m='5px' />
                                                     </motion.div>
 
                                                 )
                                             })}
-                                        </Flex>
-                                    )
-                                    }
 
-                                </motion.div>
+                                        </motion.div>
+
+                                    </motion.div>
+                                )}
 
                             </Flex>
                         </motion.div>
