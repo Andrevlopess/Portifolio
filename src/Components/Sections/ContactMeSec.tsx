@@ -1,10 +1,10 @@
 import { Center, Flex, Image, Link, Text } from "@chakra-ui/react"
-import GmailIcon from '../../Icons/Images/GmailIcon.png'
-import GitHubIcon from '../../Icons/Images/GitHubIcon.png'
-import InstagramIcon from '../../Icons/Images/InstaGramIcon.png'
-import WhatsAppIcon from '../../Icons/Images/WhatsAppIcon.png'
-import TwitterIcon from '../../Icons/Images/TwitterIcon.png'
-import FinalWave from "../../Icons/FinalWave"
+import GmailIcon from '../../Images/Images/GmailIcon.png'
+import GitHubIcon from '../../Images/Images/GitHubIcon.png'
+import InstagramIcon from '../../Images/Images/InstaGramIcon.png'
+import WhatsAppIcon from '../../Images/Images/WhatsAppIcon.png'
+import TwitterIcon from '../../Images/Images/TwitterIcon.png'
+import FinalWave from "../../Icons/FinalWave.svg"
 
 const ContactMeSec = () => {
 
@@ -47,7 +47,7 @@ const ContactMeSec = () => {
                 </Flex>
             </Flex>
 
-            <FinalWave />
+           <Image src={FinalWave}/>
         </Flex>
     )
 }

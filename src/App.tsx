@@ -30,7 +30,7 @@ function App() {
         <ScrollDown />
         <AboutMeSection />
         <ScrollDown />
-        <SkillsSection />
+        {/* <SkillsSection /> */}
         <ProjectsSec />
         <ContactMeSec />
       </Flex>

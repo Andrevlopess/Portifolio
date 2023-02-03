@@ -1,7 +1,4 @@
 
-
-const CssSVG = () => {
-    return (
         <svg width="152" height="175" viewBox="0 0 152 175" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_53_62)">
                 <path d="M14.2077 155.974L0.800781 1.95483L150.8 1.43355L138.365 155.286L77.3105 173.4L14.2077 155.974Z" fill="#1B73BA" />
@@ -14,8 +11,3 @@ const CssSVG = () => {
                 </clipPath>
             </defs>
         </svg>
-
-    )
-}
-
-export default CssSVG

@@ -56,7 +56,7 @@ export function AboutMeSection() {
                             transition={{ ease: "easeOut", duration: 2 }}
                             viewport={{ once: true }}>
                             <Highlight query='Escolas Padre Anchieta' styles={{ color: 'highBlue' }}>
-                                Coursing Tech-integrated high Scholl at Escolas Padre Anchieta
+                                Coursing Tech-integrated high Scholl at Escolas Padre Anchieta,
                                 Jundiaí, SP
                             </Highlight>
                         </motion.div>

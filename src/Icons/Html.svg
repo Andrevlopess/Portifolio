@@ -1,7 +1,5 @@
 
 
-const HtmlSVG = () => {
-  return (
     <svg width="150" height="172" viewBox="0 0 58 66" fill="none" xmlns="http://www.w3.org/2000/svg">
     <g clip-path="url(#clip0_53_58)">
     <path d="M5.86709 58.9911L0.799561 0.774414L57.496 0.57738L52.7957 58.7311L29.7185 65.5778L5.86709 58.9911Z" fill="#E34F26"/>
@@ -14,7 +12,3 @@ const HtmlSVG = () => {
     </clipPath>
     </defs>
     </svg>
-  )
-}
-
-export default HtmlSVG
