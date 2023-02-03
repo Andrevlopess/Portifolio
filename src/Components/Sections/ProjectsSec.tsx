@@ -17,7 +17,16 @@ import ProjectBg from "../../Images/ProjectsBg.svg";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BsGithub } from "react-icons/bs";
-import Cursor from '../../Icons/Cursor.svg'
+import Css from '../../Icons/Css.svg'
+import Devices from '../../Icons/Devices.svg'
+import Figma from '../../Icons/Figma.svg'
+import Firebase from '../../Icons/Firebase.svg'
+import Git from '../../Icons/Git.svg'
+import GitHub from '../../Icons/GitHub.svg'
+import Html from '../../Icons/Html.svg'
+import Js from '../../Icons/Js.svg'
+import React from '../../Icons/React.svg'
+import Ts from '../../Icons/Ts.svg'
 
 const ProjectsSec = () => {
     interface IHover {
@@ -43,7 +52,7 @@ const ProjectsSec = () => {
             description: "typetodo description",
             gitRepo: "https://github.com/Andrevlopess/typeTodoList",
             url: "https://type-todos.vercel.app/",
-            tools: [Cursor],
+            tools: [React, Ts, Firebase, Figma, Devices],
             banner: TypeTodoBanner,
         },
         {
@@ -53,6 +62,7 @@ const ProjectsSec = () => {
             gitRepo: "https://github.com/Andrevlopess/gymApp",
             url: "https://gym-nation.vercel.app/",
             banner: GymNationBanner,
+            tools: [React, Ts, Firebase, Figma, Devices, Js]
         },
         {
             id: "Nlw Setup",
@@ -81,10 +91,28 @@ const ProjectsSec = () => {
         },
     };
 
+    const toolsContainer = {
+        hidden: { opacity: 0 },
+        show: {
+            opacity: 1,
+            transition: {
+                delayChildren: 0.2,
+                staggerChildren: 0.1,
+            },
+        },
+    };
+
+
+
     const item = {
         hidden: { x: 0 },
-        show: { x: -80 },
+        show: { x: -100 },
     };
+
+    const tools = {
+        hidden: { x: 0, opacity: 0 },
+        show: { x: -400, opacity: 1 },
+    }
 
     return (
         <Flex
@@ -129,40 +157,7 @@ const ProjectsSec = () => {
                             <Flex
                                 w="100%"
                                 my="25px"
-                                overflow="hidden"
-                                alignItems="center"
-                                justifyContent="center"
                             >
-
-                                {project.tools?.map((tool) => {
-                                    return (<Image src={tool}/>)
-
-                                })}
-
-                                {hover?.projTitle === project.title && hover.state && (
-                                    <motion.div>
-                                        <Center
-                                            marginTop="10px"
-                                            marginRight="-50px"
-                                            h="65px"
-                                            w="65px"
-                                            borderRadius="50%"
-                                            boxShadow="0 -10px 50px black"
-                                            style={{
-                                                background:
-                                                    "linear-gradient(to right, #4d0484, #9240d0) border-box",
-                                            }}
-                                        >
-                                            <Link href={project.url}>
-                                                <FontAwesomeIcon
-                                                    icon={faArrowUpRightFromSquare}
-                                                    fontSize="20px"
-                                                />
-                                            </Link>
-                                        </Center>
-                                    </motion.div>
-                                )}
-
                                 <Image
                                     src={project.banner}
                                     borderRadius="10px"
@@ -174,15 +169,16 @@ const ProjectsSec = () => {
 
                                 {hover?.projTitle === project.title && hover.state && (
                                     <motion.div
+                                        style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
                                         variants={container}
                                         initial="hidden"
                                         animate="show"
                                     >
+
                                         {project.url && (
                                             <motion.div variants={item}>
                                                 <Center
-                                                    marginTop="10px"
-                                                    marginRight="-50px"
+                                                    marginRight='-50px'
                                                     h="65px"
                                                     w="65px"
                                                     borderRadius="50%"
@@ -204,8 +200,8 @@ const ProjectsSec = () => {
 
                                         <motion.div variants={item}>
                                             <Center
+                                                marginRight='-50px'
                                                 marginTop="10px"
-                                                marginRight="-50px"
                                                 h="65px"
                                                 w="65px"
                                                 borderRadius="50%"
@@ -220,8 +216,34 @@ const ProjectsSec = () => {
                                                 </Link>
                                             </Center>
                                         </motion.div>
+
+
+
                                     </motion.div>
                                 )}
+
+                                <motion.div 
+                                style={{ display: 'flex', alignItems: 'flex-end' }}
+                                    variants={toolsContainer}
+                                    initial="hidden"
+                                    animate="show">
+                                    {hover?.projTitle === project.title && hover.state && project.tools && (
+                                        <Flex w='100%' >
+                                            {project.tools?.map((tool) => {
+                                                return (
+                                                    <motion.div style={{width:'55px'}} variants={tools}>
+                                                        <Image src={tool} key={tool} boxSize='50px'
+                                                            m='5px' />
+                                                    </motion.div>
+
+                                                )
+                                            })}
+                                        </Flex>
+                                    )
+                                    }
+
+                                </motion.div>
+
                             </Flex>
                         </motion.div>
                     );
