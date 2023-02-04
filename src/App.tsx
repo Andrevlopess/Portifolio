@@ -27,18 +27,18 @@ function App() {
           <Flex w='80%' p='20px' justifyContent='center'>
             <Text fontSize='1.2em' mr='10px' _hover={{color:'txtDistact'}} transition='.3s' cursor='pointer'>
               <Link
-                activeClass="active" className="AboutMe" to="AboutMe" spy={true} smooth={true} duration={500}>
+                activeClass="active" className="AboutMe" to="AboutMe" spy={true} smooth={true} duration={800}>
                 About me
               </Link>
             </Text>
             <Text fontSize='1.2em' mx='10px' _hover={{color:'txtDistact'}} transition='.3s' cursor='pointer'>
               <Link
-                activeClass="active" className="projects" to="projects" spy={true} smooth={true} duration={500}>
+                activeClass="active" className="projects" to="projects" spy={true} smooth={true} duration={800}>
                 Projects
               </Link> </Text>
             <Text fontSize='1.2em' mx='10px' _hover={{color:'txtDistact'}} transition='.3s' cursor='pointer'>
               <Link
-                activeClass="active" className="Contact" to="Contact" spy={true} smooth={true} duration={500}>
+                activeClass="active" className="Contact" to="Contact" spy={true} smooth={true} duration={800}>
                 Contact
               </Link> </Text>
         </Flex>

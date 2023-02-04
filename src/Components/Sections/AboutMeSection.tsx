@@ -24,7 +24,7 @@ export function AboutMeSection() {
                 <Text fontSize='3.3em' textAlign='center'>
                     <motion.text
                         initial={{ opacity: 0 }}
-                        whileInView={{ opacity: 1 }}
+                        whileInView={{  opacity: 1 }}
                         transition={{ ease: "easeOut", duration: 2 }}
                         viewport={{once: true}}>
                         <Highlight query='Frontend focused Web Developer' styles={{ color: 'violet100' }}>
@@ -37,9 +37,9 @@ export function AboutMeSection() {
                 <Flex w='100%'>
                     <Text fontSize='1.4em'>
                         <motion.div
-                            initial={{ x: -500, opacity: 0 }}
-                            whileInView={{ x: 0, opacity: 1 }}
-                            transition={{ ease: "easeOut", duration: 2 }}
+                            initial={{ y: 100, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            transition={{ ease: "easeOut", duration: 1.5 }}
                             viewport={{ once: true }}
                         >
                             <Highlight query='Escolas Padre Anchieta' styles={{ color: 'highBlue' }}>
@@ -51,9 +51,9 @@ export function AboutMeSection() {
                     </Text>
                     <Text fontSize='1.4em'>
                         <motion.div
-                            initial={{ x: 500, opacity: 0 }}
-                            whileInView={{ x: 0, opacity: 1 }}
-                            transition={{ ease: "easeOut", duration: 2 }}
+                            initial={{ y: 100, opacity: 0 }}
+                            whileInView={{ y: 0, opacity: 1 }}
+                            transition={{ ease: "easeOut", duration: 1.5 }}
                             viewport={{ once: true }}>
                             <Highlight query='Escolas Padre Anchieta' styles={{ color: 'highBlue' }}>
                                 Coursing Tech-integrated high Scholl at Escolas Padre Anchieta,
