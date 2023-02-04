@@ -110,8 +110,8 @@ const ProjectsSec = () => {
     };
 
     const tools = {
-        hidden: { x: 0, opacity: 0 },
-        show: { x: -400, opacity: 1 },
+        hidden: { y: 0, opacity: 0 },
+        show: { y: 60, opacity: 1 },
     }
 
     return (
@@ -154,19 +154,39 @@ const ProjectsSec = () => {
                             }
                             transition={{ ease: "easeInOut", duration: 0.4 }}
                         >
+                            {hover?.projTitle === project.title && hover.state && (
+                                <Flex w='100%' h='0' justifyContent='center' >
+                                    <motion.div
+                                        variants={container}
+                                        initial="hidden"
+                                        animate="show"
+                                        style={{ display: 'flex' }}>
+                                        {project.tools?.map((tool) => {
+                                            return (
+                                                <motion.div variants={tools}>
+                                                    <Image src={tool} key={tool} boxSize='50px'
+                                                        filter='drop-shadow(0px 5px 2px black)'
+                                                        _hover={{ transform: 'scale(1.2)' }} transition='.2s'
+                                                        m='5px'/>
+                                                </motion.div>
+                                            )
+                                        })}
+                                    </motion.div>
+                                </Flex>
+                            )}
+
                             <Flex
                                 w="100%"
                                 my="25px"
-
+                                overflow='hidden'
                             >
                                 <Image
                                     src={project.banner}
                                     borderRadius="10px"
                                     transition=".4s"
-                                    opacity={
-                                        hover?.projTitle === project.title && hover.state ? 0.4 : 1
-                                    }
                                 />
+
+
 
                                 {hover?.projTitle === project.title && hover.state && (
                                     <motion.div
@@ -178,24 +198,25 @@ const ProjectsSec = () => {
 
                                         {project.url && (
                                             <motion.div variants={item}>
-                                                <Center
-                                                    marginRight='-50px'
-                                                    h="65px"
-                                                    w="65px"
-                                                    borderRadius="50%"
-                                                    boxShadow="0 -10px 50px black"
-                                                    style={{
-                                                        background:
-                                                            "linear-gradient(to right, #4d0484, #9240d0) border-box",
-                                                    }}
-                                                >
-                                                    <Link href={project.url}>
+                                                <Link href={project.url}>
+                                                    <Center
+                                                        marginRight='-50px'
+                                                        h="65px"
+                                                        w="65px"
+                                                        borderRadius="50%"
+                                                        boxShadow="0 -10px 50px black"
+                                                        style={{
+                                                            background:
+                                                                "linear-gradient(to right, #4d0484, #9240d0) border-box",
+                                                        }}
+                                                    >
                                                         <FontAwesomeIcon
+
                                                             icon={faArrowUpRightFromSquare}
                                                             fontSize="20px"
                                                         />
-                                                    </Link>
-                                                </Center>
+                                                    </Center>
+                                                </Link>
                                             </motion.div>
                                         )}
 
@@ -218,22 +239,9 @@ const ProjectsSec = () => {
                                             </Center>
                                         </motion.div>
 
-                                        <motion.div style={{display:'flex'}}>
-                                            {project.tools?.map((tool) => {
-                                                return (
-                                                    <motion.div style={{ width: '55px' }} variants={tools}>
-                                                        <Image src={tool} key={tool} boxSize='50px'
-                                                            m='5px' />
-                                                    </motion.div>
-
-                                                )
-                                            })}
-
-                                        </motion.div>
 
                                     </motion.div>
                                 )}
-
                             </Flex>
                         </motion.div>
                     );
