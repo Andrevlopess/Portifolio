@@ -5,7 +5,7 @@ import eu from '../../Images/andrevlopes.jpeg'
 const IntroductionSec = () => {
 
   return (
-    <Flex w='80%' justifyContent='space-around' minH='95vh' alignItems='center'>
+    <Flex w='80%' justifyContent='space-between' p='20px' minH='95vh' alignItems='center' >
       <motion.div
         initial={{ opacity: 0, x: -50 }}
         animate={{ opacity: 1, x: 0 }}

@@ -13,7 +13,6 @@ import TypeTodoBanner from "../../Images/TypeTodoBanner.png";
 import GymNationBanner from "../../Images/GymNationBanner.png";
 import NlwSetupBanner from "../../Images/NlwSetup.png";
 import BarDoZéBanner from "../../Images/BarDoZéBanner.png";
-import ProjectBg from "../../Images/ProjectsBg.svg";
 import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { BsGithub } from "react-icons/bs";
@@ -27,6 +26,11 @@ import Html from '../../Icons/Html.svg'
 import Js from '../../Icons/Js.svg'
 import React from '../../Icons/React.svg'
 import Ts from '../../Icons/Ts.svg'
+import TailwindCss from '../../Icons/TailwindCss.svg'
+import Expo from '../../Icons/Expo.svg'
+import ReactNative from '../../Icons/ReactNative.svg'
+import Prisma from '../../Icons/Prisma.svg'
+import StyledComponents from '../../Icons/StyledComponents.svg'
 
 const ProjectsSec = () => {
     interface IHover {
@@ -52,7 +56,7 @@ const ProjectsSec = () => {
             description: "typetodo description",
             gitRepo: "https://github.com/Andrevlopess/typeTodoList",
             url: "https://type-todos.vercel.app/",
-            tools: [React, Ts, Firebase, Figma, Devices],
+            tools: [React, Ts, Firebase, Figma, Devices, Git, GitHub],
             banner: TypeTodoBanner,
         },
         {
@@ -62,7 +66,7 @@ const ProjectsSec = () => {
             gitRepo: "https://github.com/Andrevlopess/gymApp",
             url: "https://gym-nation.vercel.app/",
             banner: GymNationBanner,
-            tools: [React, Ts, Firebase, Figma, Devices, Js]
+            tools: [React, Ts, Firebase, Figma, Devices, Js, Git, GitHub]
         },
         {
             id: "Nlw Setup",
@@ -70,6 +74,7 @@ const ProjectsSec = () => {
             description: "Nlw Setup description",
             gitRepo: "https://github.com/Andrevlopess/nlwHabits",
             banner: NlwSetupBanner,
+            tools: [React, ReactNative, Expo, Prisma,TailwindCss, Ts, Figma, Devices, Git, GitHub]
         },
         {
             id: "Bar do zé",
@@ -78,6 +83,7 @@ const ProjectsSec = () => {
             gitRepo: "https://github.com/Andrevlopess/BardozeMenu",
             url: "https://bardoze.netlify.app/",
             banner: BarDoZéBanner,
+            tools: [React, Js, StyledComponents, Html, Css, Git, GitHub]
         },
     ];
     const container = {
@@ -165,7 +171,7 @@ const ProjectsSec = () => {
                                             return (
                                                 <motion.div variants={tools}>
                                                     <Image src={tool} key={tool} boxSize='50px'
-                                                        filter='drop-shadow(0px 5px 2px black)'
+                                                        filter='drop-shadow(0px 10px 8px black)'
                                                         _hover={{ transform: 'scale(1.2)' }} transition='.2s'
                                                         m='5px'/>
                                                 </motion.div>

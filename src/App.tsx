@@ -3,10 +3,9 @@ import { useEffect, useState } from 'react';
 import { AboutMeSection } from './Components/Sections/AboutMeSection';
 import IntroductionSec from './Components/Sections/IntroductionSec';
 import ScrollDown from './Components/ScrollDown';
-import Cursor from './Icons/Cursor.svg'
-import SkillsSection from './Components/Sections/SkillsSection';
 import ProjectsSec from './Components/Sections/ProjectsSec';
 import ContactMeSec from './Components/Sections/ContactMeSec';
+import { Element, Link } from 'react-scroll';
 
 function App() {
 
@@ -24,15 +23,39 @@ function App() {
       p='0'
     >
 
-
       <Flex w='100%' justifyContent='center' alignItems='center' flexDirection='column'>
+          <Flex w='80%' p='20px' justifyContent='center'>
+            <Text fontSize='1.2em' mr='10px' _hover={{color:'txtDistact'}} transition='.3s' cursor='pointer'>
+              <Link
+                activeClass="active" className="AboutMe" to="AboutMe" spy={true} smooth={true} duration={500}>
+                About me
+              </Link>
+            </Text>
+            <Text fontSize='1.2em' mx='10px' _hover={{color:'txtDistact'}} transition='.3s' cursor='pointer'>
+              <Link
+                activeClass="active" className="projects" to="projects" spy={true} smooth={true} duration={500}>
+                Projects
+              </Link> </Text>
+            <Text fontSize='1.2em' mx='10px' _hover={{color:'txtDistact'}} transition='.3s' cursor='pointer'>
+              <Link
+                activeClass="active" className="Contact" to="Contact" spy={true} smooth={true} duration={500}>
+                Contact
+              </Link> </Text>
+        </Flex>
+
         <IntroductionSec />
         <ScrollDown />
-        <AboutMeSection />
+        <Element name='AboutMe'>
+          <AboutMeSection />
+        </Element>
         <ScrollDown />
-        {/* <SkillsSection /> */}
-        <ProjectsSec />
-        <ContactMeSec />
+        <Element name='projects'>
+          <ProjectsSec />
+        </Element>
+        <Element name='Contact' style={{width:'100%'}}>
+          <ContactMeSec />
+        </Element>
+
       </Flex>
     </Container>
   )
