@@ -16,7 +16,7 @@ function App() {
       w='100%'
       overflow='hidden'
       fontWeight='bold'
-      style={{ fontFamily: 'Plus jakarta sans', scrollBehavior: 'smooth', }}
+      style={{ fontFamily: 'Plus jakarta sans', scrollBehavior: 'smooth' }}
       bgColor='background'
       minH='100vh'
       m='0'

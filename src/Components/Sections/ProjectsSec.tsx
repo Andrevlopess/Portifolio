@@ -97,18 +97,6 @@ const ProjectsSec = () => {
         },
     };
 
-    const toolsContainer = {
-        hidden: { opacity: 0 },
-        show: {
-            opacity: 1,
-            transition: {
-                delayChildren: 0.2,
-                staggerChildren: 0.1,
-            },
-        },
-    };
-
-
 
     const item = {
         hidden: { x: 0 },
