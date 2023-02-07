@@ -24,19 +24,20 @@ function App() {
     >
 
       <Flex w='100%' justifyContent='center' alignItems='center' flexDirection='column'>
+
           <Flex w='80%' p='20px' justifyContent='center'>
-            <Text fontSize='1.2em' mr='10px' _hover={{color:'txtDistact'}} transition='.3s' cursor='pointer'>
+            <Text fontSize='min(1em, 5vw)' mr='10px' _hover={{color:'txtDistact'}} transition='.3s' cursor='pointer'>
               <Link
                 activeClass="active" className="AboutMe" to="AboutMe" spy={true} smooth={true} duration={800}>
                 About me
               </Link>
             </Text>
-            <Text fontSize='1.2em' mx='10px' _hover={{color:'txtDistact'}} transition='.3s' cursor='pointer'>
+            <Text fontSize='min(1em, 5vw)' mx='10px' _hover={{color:'txtDistact'}} transition='.3s' cursor='pointer'>
               <Link
                 activeClass="active" className="projects" to="projects" spy={true} smooth={true} duration={800}>
                 Projects
               </Link> </Text>
-            <Text fontSize='1.2em' mx='10px' _hover={{color:'txtDistact'}} transition='.3s' cursor='pointer'>
+            <Text fontSize='min(1em, 5vw)' mx='10px' _hover={{color:'txtDistact'}} transition='.3s' cursor='pointer'>
               <Link
                 activeClass="active" className="Contact" to="Contact" spy={true} smooth={true} duration={800}>
                 Contact
