@@ -1,7 +1,7 @@
 import { Center, Flex, Image, Link, Text } from "@chakra-ui/react"
 import GmailIcon from '../../Images/Images/GmailIcon.png'
 import GitHubIcon from '../../Images/Images/GitHubIcon.png'
-import InstagramIcon from '../../Images/Images/InstaGramIcon.png'
+import InstagramIcon from '../../Images/Images/InstagramIcon.png'
 import WhatsAppIcon from '../../Images/Images/WhatsAppIcon.png'
 import TwitterIcon from '../../Images/Images/TwitterIcon.png'
 import FinalWave from "../../Icons/FinalWave.svg"
