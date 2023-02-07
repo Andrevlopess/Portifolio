@@ -139,7 +139,7 @@ const ProjectsSec = () => {
             >
                 {projects.map((project) => {
                     return (
-                        <motion.div
+                        <motion.div key={project.id}
                             onHoverStart={() =>
                                 setHover({ projTitle: project.title, state: true })
                             }
@@ -157,7 +157,7 @@ const ProjectsSec = () => {
                                         style={{ display: 'flex' }}>
                                         {project.tools?.map((tool) => {
                                             return (
-                                                <motion.div variants={tools}>
+                                                <motion.div variants={tools} key={tool}>
                                                     <Image src={tool} key={tool} boxSize='50px'
                                                         filter='drop-shadow(0px 10px 8px black)'
                                                         _hover={{ transform: 'scale(1.2)' }} transition='.2s'
