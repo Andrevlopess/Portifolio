@@ -25,7 +25,7 @@ function App() {
 
       <Flex w='100%' justifyContent='center' alignItems='center' flexDirection='column'>
 
-          <Flex w='80%' p='20px' justifyContent='center'>
+          <Flex w='80%' p='20px' justifyContent='center' mt='20px'>
             <Text fontSize='min(1em, 5vw)' mr='10px' _hover={{color:'txtDistact'}} transition='.3s' cursor='pointer'>
               <Link
                 activeClass="active" className="AboutMe" to="AboutMe" spy={true} smooth={true} duration={800}>
