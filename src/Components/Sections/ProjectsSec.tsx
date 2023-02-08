@@ -74,7 +74,7 @@ const ProjectsSec = () => {
             description: "Nlw Setup description",
             gitRepo: "https://github.com/Andrevlopess/nlwHabits",
             banner: NlwSetupBanner,
-            tools: [React, ReactNative, Expo, Prisma,TailwindCss, Ts, Figma, Devices, Git, GitHub]
+            tools: [React, ReactNative, Expo, Prisma, TailwindCss, Ts, Figma, Devices, Git, GitHub]
         },
         {
             id: "Bar do zé",
@@ -100,12 +100,12 @@ const ProjectsSec = () => {
 
     const item = {
         hidden: { x: 0 },
-        show: { x: -100 },
+        show: { x: '-10vw' },
     };
 
     const tools = {
         hidden: { y: 0, opacity: 0 },
-        show: { y: 60, opacity: 1 },
+        show: { y: '8vw', opacity: 1 },
     }
 
     return (
@@ -114,18 +114,17 @@ const ProjectsSec = () => {
             flexDirection="column"
             justifyContent="center"
             alignItems="center"
+            my='50px'
         >
-            <Flex w="100%" justifyContent="flex-start">
-                <Text
-                    fontSize="12em"
-                    color="txtDistact"
-                    bgGradient="linear(to-r, violet300, violet200, violet100)"
-                    bgClip="text"
-                    ml="-40px"
-                >
-                    Projects
-                </Text>
-            </Flex>
+            <Text
+                fontSize="min(12em, 15vw)"
+                color="txtDistact"
+                bgGradient="linear(to-r, violet300, violet200, violet100)"
+                bgClip="text"
+            >
+                Projects
+            </Text>
+
 
             <Flex
                 w="80%"
@@ -147,33 +146,35 @@ const ProjectsSec = () => {
                                 setHover({ projTitle: project.title, state: false })
                             }
                             transition={{ ease: "easeInOut", duration: 0.4 }}
+
                         >
-                            {hover?.projTitle === project.title && hover.state && (
-                                <Flex w='100%' h='0' justifyContent='center' >
-                                    <motion.div
-                                        variants={container}
-                                        initial="hidden"
-                                        animate="show"
-                                        style={{ display: 'flex' }}>
-                                        {project.tools?.map((tool) => {
-                                            return (
-                                                <motion.div variants={tools} key={tool}>
-                                                    <Image src={tool} key={tool} boxSize='50px'
-                                                        filter='drop-shadow(0px 10px 8px black)'
-                                                        _hover={{ transform: 'scale(1.2)' }} transition='.2s'
-                                                        m='5px'/>
-                                                </motion.div>
-                                            )
-                                        })}
-                                    </motion.div>
-                                </Flex>
-                            )}
+
+                            <Flex w='100%' h='0' justifyContent='center' px='min(50px, 4vw)' >
+                                <motion.div
+                                    variants={container}
+                                    initial="hidden"
+                                    whileInView="show"
+                                    style={{ display: 'flex' }}>
+                                    {project.tools?.map((tool) => {
+                                        return (
+                                            <motion.div variants={tools} key={tool}>
+                                                <Image src={tool} key={tool} boxSize='min(50px, 4vw)'
+                                                    filter='drop-shadow(0px 10px 40px black)'
+                                                    m='5px'
+                                                    _hover={{ transform: 'scale(1.2)' }} transition='.2s'
+                                                />
+                                            </motion.div>
+                                        )
+                                    })}
+                                </motion.div>
+                            </Flex>
+
 
                             <Flex
                                 w="100%"
-                                my="25px"
-                                overflow='hidden'
+                                my="15px"
                             >
+
                                 <Image
                                     src={project.banner}
                                     borderRadius="10px"
@@ -181,61 +182,59 @@ const ProjectsSec = () => {
                                 />
 
 
+                                <motion.div
+                                    style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding:'10px'}}
+                                    variants={container}
+                                    initial="hidden"
+                                    animate="show"
 
-                                {hover?.projTitle === project.title && hover.state && (
-                                    <motion.div
-                                        style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}
-                                        variants={container}
-                                        initial="hidden"
-                                        animate="show"
-                                    >
+                                >
 
-                                        {project.url && (
-                                            <motion.div variants={item}>
-                                                <Link href={project.url}>
-                                                    <Center
-                                                        marginRight='-50px'
-                                                        h="65px"
-                                                        w="65px"
-                                                        borderRadius="50%"
-                                                        boxShadow="0 -10px 50px black"
-                                                        style={{
-                                                            background:
-                                                                "linear-gradient(to right, #4d0484, #9240d0) border-box",
-                                                        }}
-                                                    >
-                                                        <FontAwesomeIcon
-
-                                                            icon={faArrowUpRightFromSquare}
-                                                            fontSize="20px"
-                                                        />
-                                                    </Center>
-                                                </Link>
-                                            </motion.div>
-                                        )}
-
+                                    {project.url && (
                                         <motion.div variants={item}>
-                                            <Center
-                                                marginRight='-50px'
-                                                marginTop="10px"
-                                                h="65px"
-                                                w="65px"
-                                                borderRadius="50%"
-                                                boxShadow="0 -10px 50px black"
-                                                style={{
-                                                    background:
-                                                        "linear-gradient(to right, #4d0484, #9240d0) border-box",
-                                                }}
-                                            >
-                                                <Link href={project.gitRepo}>
-                                                    <BsGithub size="35px" />
-                                                </Link>
-                                            </Center>
+                                            <Link href={project.url}>
+                                                <Center
+                                                    h="min(65px, 6vw)"
+                                                    w="min(65px, 6vw)"
+                                                    borderRadius="50%"
+                                                    boxShadow="0 -10px 50px black"
+                                                    style={{
+                                                        background:
+                                                            "linear-gradient(to right, #4d0484, #9240d0) border-box",
+                                                    }}
+                                                >
+                                                    <FontAwesomeIcon
+
+                                                        icon={faArrowUpRightFromSquare}
+                                                        fontSize="min(20px, 3vw)"
+                                                    />
+                                                </Center>
+                                            </Link>
                                         </motion.div>
+                                    )}
 
-
+                                    <motion.div variants={item}>
+                                        <Center
+                                            marginRight="min(-50px, -6vw)"
+                                            marginTop="10px"
+                                            h="min(65px, 6vw)"
+                                            w="min(65px, 6vw)"
+                                            borderRadius="50%"
+                                            boxShadow="0 -10px 50px black"
+                                            style={{
+                                                background:
+                                                    "linear-gradient(to right, #4d0484, #9240d0) border-box",
+                                            }}
+                                        >
+                                            <Link href={project.gitRepo}>
+                                                <BsGithub size="min(35px, 3vw)" />
+                                            </Link>
+                                        </Center>
                                     </motion.div>
-                                )}
+
+
+                                </motion.div>
+
                             </Flex>
                         </motion.div>
                     );
