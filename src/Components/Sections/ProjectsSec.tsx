@@ -37,12 +37,7 @@ import TypeTodoMockup from '../../Icons/ProjectsMockups/TypeTodoMockup.svg'
 import BarDoZéMockup from '../../Icons/ProjectsMockups/BarDoZéMockup.svg'
 
 const ProjectsSec = () => {
-    interface IHover {
-        projTitle: string;
-        state: boolean;
-    }
-
-    const [hover, setHover] = useState<IHover>();
+ 
 
     interface Iproject {
         title: string;
@@ -57,7 +52,7 @@ const ProjectsSec = () => {
         {
             id: "TypeTodo",
             title: "TypeTodo",
-            description: 'typetodo description',
+            description: 'TypeTodo is a todo project built with react and Chakra-ui for front-end, firebase for back-end and authentication, and Figma for design. Manage your daily tasks. ',
             gitRepo: "https://github.com/Andrevlopess/typeTodoList",
             url: "https://type-todos.vercel.app/",
             tools: [React, Ts, Firebase, Figma, Devices, Git, GitHub],
@@ -66,7 +61,7 @@ const ProjectsSec = () => {
         {
             id: "GymNation",
             title: "Gym Nation",
-            description: "GymNation description",
+            description: "Create your own workout with more than 1300 exercises, search and like your favorite exercises, built with react and Chakra-ui for front-end, firebase for back-end. ",
             gitRepo: "https://github.com/Andrevlopess/gymApp",
             url: "https://gym-nation.vercel.app/",
             mockup: GymNationMockup,
@@ -75,7 +70,7 @@ const ProjectsSec = () => {
         {
             id: "Nlw Setup",
             title: "Nlw Setup",
-            description: "Nlw Setup description",
+            description: "NLw Setup is an event from Rocketseat, that makes an app to create new habits, built with React and React Native for front-end and prisma for back-end.",
             gitRepo: "https://github.com/Andrevlopess/nlwHabits",
             mockup: NlwHabitsMockup,
             tools: [React, ReactNative, Expo, Prisma, TailwindCss, Ts, Figma, Devices, Git, GitHub]
@@ -83,34 +78,13 @@ const ProjectsSec = () => {
         {
             id: "Bar do zé",
             title: "Bar do zé",
-            description: "Bar do zé description",
+            description: "Bar do zé is and online menu, where you can order foods from the restaurant.",
             gitRepo: "https://github.com/Andrevlopess/BardozeMenu",
             url: "https://bardoze.netlify.app/",
             mockup: BarDoZéMockup,
             tools: [React, Js, StyledComponents, Html, Css, Git, GitHub]
         },
     ];
-    const container = {
-        hidden: { opacity: 0 },
-        show: {
-            opacity: 1,
-            transition: {
-                delayChildren: 0.2,
-                staggerChildren: 0.1,
-            },
-        },
-    };
-
-
-    const item = {
-        hidden: { x: 0 },
-        show: { x: '-10vw' },
-    };
-
-    const tools = {
-        hidden: { y: 0, opacity: 0 },
-        show: { y: '8vw', opacity: 1 },
-    }
 
     return (
         <Flex
@@ -135,30 +109,30 @@ const ProjectsSec = () => {
                 flexDirection="column"
                 justifyContent="center"
                 my="100px"
-                bgColor="bgDistinct"
-                py="30px"
-                px="50px"
-                borderRadius="20px"
             >
                 {projects.map((project) => {
                     return (
-                        <Flex my='100px' key={project.id} w='100%' flexWrap='wrap' justifyContent='center'>
-                            <Image src={project.mockup} />
-                            <Flex flexDirection='column'>
-                                <Text fontSize='min(4em, 6.5vw)'>
+                        <Flex bgColor="bgDistinct" borderRadius='50px' p='50px' my='100px' key={project.id} w='100%' flexWrap='wrap' justifyContent='center' >
+                            <Image src={project.mockup} mb='30px' />
+                            <Flex flexDirection='column' mx='50px'>
+                                <Text fontSize='min(4em, 8.5vw)' mb='20px' textAlign='center'>
                                     {project.title}
                                 </Text>
-                                <Text>
+                                <Text w='min(25em, 65vw)' mb='30px' fontSize='min(1.4em, 4.5vw)' >
                                     {project.description}
                                 </Text>
-                                <Flex>
-                                    {
-                                        project.tools?.map((tool) => {
-                                            return (
-                                                <Image src={tool} boxSize='30px' />
-                                            )
-                                        })
-                                    }
+                                <Flex flexDirection='column'>
+                                    <Text color='violet100' fontSize='min(2em, 4.5vw)'>Built with:</Text>
+                                    <Flex flexWrap='wrap' w='min(30em, 65vw)' justifyContent='center' my='10px'>
+                                        {
+                                            project.tools?.map((tool) => {
+                                                return (
+                                                    <Image src={tool} boxSize='min(3em, 7.5vw)' m='5px' />
+                                                )
+                                            })
+                                        }
+                                    </Flex>
+
                                 </Flex>
 
 
