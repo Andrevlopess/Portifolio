@@ -9,7 +9,7 @@ import {
 } from "@chakra-ui/react";
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import TypeTodoBanner from "../../Images/TypeTodoBanner.png";
+import TypeTodomockup from "../../Images/TypeTodoBanner.png";
 import GymNationBanner from "../../Images/GymNationBanner.png";
 import NlwSetupBanner from "../../Images/NlwSetup.png";
 import BarDoZéBanner from "../../Images/BarDoZéBanner.png";
@@ -31,6 +31,10 @@ import Expo from '../../Icons/Expo.svg'
 import ReactNative from '../../Icons/ReactNative.svg'
 import Prisma from '../../Icons/Prisma.svg'
 import StyledComponents from '../../Icons/StyledComponents.svg'
+import GymNationMockup from '../../Icons/ProjectsMockups/GymNationMockup.svg'
+import NlwHabitsMockup from '../../Icons/ProjectsMockups/NlwHabitsMockup.svg'
+import TypeTodoMockup from '../../Icons/ProjectsMockups/TypeTodoMockup.svg'
+import BarDoZéMockup from '../../Icons/ProjectsMockups/BarDoZéMockup.svg'
 
 const ProjectsSec = () => {
     interface IHover {
@@ -43,7 +47,7 @@ const ProjectsSec = () => {
     interface Iproject {
         title: string;
         id: string;
-        banner: string;
+        mockup: string;
         description: string;
         gitRepo: string;
         tools?: string[];
@@ -53,11 +57,11 @@ const ProjectsSec = () => {
         {
             id: "TypeTodo",
             title: "TypeTodo",
-            description: "typetodo description",
+            description: 'typetodo description',
             gitRepo: "https://github.com/Andrevlopess/typeTodoList",
             url: "https://type-todos.vercel.app/",
             tools: [React, Ts, Firebase, Figma, Devices, Git, GitHub],
-            banner: TypeTodoBanner,
+            mockup: TypeTodoMockup,
         },
         {
             id: "GymNation",
@@ -65,7 +69,7 @@ const ProjectsSec = () => {
             description: "GymNation description",
             gitRepo: "https://github.com/Andrevlopess/gymApp",
             url: "https://gym-nation.vercel.app/",
-            banner: GymNationBanner,
+            mockup: GymNationMockup,
             tools: [React, Ts, Firebase, Figma, Devices, Js, Git, GitHub]
         },
         {
@@ -73,7 +77,7 @@ const ProjectsSec = () => {
             title: "Nlw Setup",
             description: "Nlw Setup description",
             gitRepo: "https://github.com/Andrevlopess/nlwHabits",
-            banner: NlwSetupBanner,
+            mockup: NlwHabitsMockup,
             tools: [React, ReactNative, Expo, Prisma, TailwindCss, Ts, Figma, Devices, Git, GitHub]
         },
         {
@@ -82,7 +86,7 @@ const ProjectsSec = () => {
             description: "Bar do zé description",
             gitRepo: "https://github.com/Andrevlopess/BardozeMenu",
             url: "https://bardoze.netlify.app/",
-            banner: BarDoZéBanner,
+            mockup: BarDoZéMockup,
             tools: [React, Js, StyledComponents, Html, Css, Git, GitHub]
         },
     ];
@@ -127,7 +131,7 @@ const ProjectsSec = () => {
 
 
             <Flex
-                w="80%"
+                w="100%"
                 flexDirection="column"
                 justifyContent="center"
                 my="100px"
@@ -138,106 +142,29 @@ const ProjectsSec = () => {
             >
                 {projects.map((project) => {
                     return (
-                        <motion.div key={project.id}
-                            onHoverStart={() =>
-                                setHover({ projTitle: project.title, state: true })
-                            }
-                            onHoverEnd={() =>
-                                setHover({ projTitle: project.title, state: false })
-                            }
-                            transition={{ ease: "easeInOut", duration: 0.4 }}
+                        <Flex my='100px' key={project.id} w='100%' flexWrap='wrap' justifyContent='center'>
+                            <Image src={project.mockup} />
+                            <Flex flexDirection='column'>
+                                <Text fontSize='min(4em, 6.5vw)'>
+                                    {project.title}
+                                </Text>
+                                <Text>
+                                    {project.description}
+                                </Text>
+                                <Flex>
+                                    {
+                                        project.tools?.map((tool) => {
+                                            return (
+                                                <Image src={tool} boxSize='30px' />
+                                            )
+                                        })
+                                    }
+                                </Flex>
 
-                        >
-
-                            <Flex w='100%' h='0' justifyContent='center' px='min(50px, 4vw)' >
-                                <motion.div
-                                    variants={container}
-                                    initial="hidden"
-                                    whileInView="show"
-                                    style={{ display: 'flex' }}>
-                                    {project.tools?.map((tool) => {
-                                        return (
-                                            <motion.div variants={tools} key={tool}>
-                                                <Image src={tool} key={tool} boxSize='min(50px, 4vw)'
-                                                    filter='drop-shadow(0px 10px 40px black)'
-                                                    m='5px'
-                                                    _hover={{ transform: 'scale(1.2)' }} transition='.2s'
-                                                />
-                                            </motion.div>
-                                        )
-                                    })}
-                                </motion.div>
-                            </Flex>
-
-
-                            <Flex
-                                w="100%"
-                                my="15px"
-                            >
-
-                                <Image
-                                    src={project.banner}
-                                    borderRadius="10px"
-                                    transition=".4s"
-                                />
-
-
-                                <motion.div
-                                    style={{ display: 'flex', flexDirection: 'column', justifyContent: 'center', padding:'10px'}}
-                                    variants={container}
-                                    initial="hidden"
-                                    animate="show"
-
-                                >
-
-                                    {project.url && (
-                                        <motion.div variants={item}>
-                                            <Link href={project.url}>
-                                                <Center
-                                                    h="min(65px, 6vw)"
-                                                    w="min(65px, 6vw)"
-                                                    borderRadius="50%"
-                                                    boxShadow="0 -10px 50px black"
-                                                    style={{
-                                                        background:
-                                                            "linear-gradient(to right, #4d0484, #9240d0) border-box",
-                                                    }}
-                                                >
-                                                    <FontAwesomeIcon
-
-                                                        icon={faArrowUpRightFromSquare}
-                                                        fontSize="min(20px, 3vw)"
-                                                    />
-                                                </Center>
-                                            </Link>
-                                        </motion.div>
-                                    )}
-
-                                    <motion.div variants={item}>
-                                        <Center
-                                            marginRight="min(-50px, -6vw)"
-                                            marginTop="10px"
-                                            h="min(65px, 6vw)"
-                                            w="min(65px, 6vw)"
-                                            borderRadius="50%"
-                                            boxShadow="0 -10px 50px black"
-                                            style={{
-                                                background:
-                                                    "linear-gradient(to right, #4d0484, #9240d0) border-box",
-                                            }}
-                                        >
-                                            <Link href={project.gitRepo}>
-                                                <BsGithub size="min(35px, 3vw)" />
-                                            </Link>
-                                        </Center>
-                                    </motion.div>
-
-
-                                </motion.div>
 
                             </Flex>
-                        </motion.div>
-                    );
+                        </Flex>
+                    )
                 })}
             </Flex>
         </Flex>
