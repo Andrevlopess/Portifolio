@@ -26,56 +26,56 @@ const ContactMeSec = () => {
 
 
     return (
-        <Flex w='100%' flexDirection='column' alignItems='center'>
-            <Flex w='100%' >
+        <Flex w='100%' flexDirection='column' alignItems='center' >
+          
                 <Text
-                    fontSize='10em'
+                    fontSize="min(12em, 15vw)"
                     color='txtDistact'
                     bgGradient='linear(to-r, violet300, violet200, violet100)'
                     bgClip='text'
-                    ml='-30px'
+
                 >Contact me</Text>
-            </Flex>
+           
 
             <motion.div
                 variants={container}
-                style={{ display: 'flex', width: '80%', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', margin: '100px 0' }}
-                animate="show">
+                style={{ display: 'flex', width: '80%', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', margin:'50px 0' }}
+                whileInView="show">
 
                 <motion.div style={{ display: 'flex' }} variants={contacts}>
                     <Link href='mailto:andrellopes021@gmail.com'>
-                        <Image src={GmailIcon} boxSize='150px' transition='.5s' _hover={{transform:'scale(1.1)'}}/>
+                        <Image src={GmailIcon} boxSize='min(5em, 13vw)' transition='.5s' _hover={{transform:'scale(1.1)'}}/>
                     </Link>
                 </motion.div>
 
 
                 <motion.div style={{ display: 'flex' }} variants={contacts}>
                     <Link href='https://www.instagram.com/andrevlopesz/'>
-                        <Image src={InstagramIcon} boxSize='150px' transition='.5s' _hover={{transform:'scale(1.1)'}}/>
+                        <Image src={InstagramIcon} boxSize='min(5em, 13vw)' transition='.5s' _hover={{transform:'scale(1.1)'}}/>
                     </Link>
                 </motion.div>
                 <motion.div style={{ display: 'flex' }} variants={contacts}>
                     <Link href='https://wa.me/11954291628'>
-                        <Image src={WhatsAppIcon} boxSize='150px' transition='.5s' _hover={{transform:'scale(1.1)'}}/>
+                        <Image src={WhatsAppIcon} boxSize='min(5em, 13vw)' transition='.5s' _hover={{transform:'scale(1.1)'}}/>
                     </Link>
                 </motion.div>
 
 
                 <motion.div style={{ display: 'flex' }} variants={contacts}>
                     <Link href='https://github.com/Andrevlopess'>
-                        <Image src={GitHubIcon} boxSize='150px' transition='.5s' _hover={{transform:'scale(1.1)'}}/>
+                        <Image src={GitHubIcon} boxSize='min(5em, 13vw)' transition='.5s' _hover={{transform:'scale(1.1)'}}/>
                     </Link>
                 </motion.div>
 
 
                 <motion.div style={{ display: 'flex' }} variants={contacts}>
                     <Link href='https://twitter.com/andrevlopess'>
-                        <Image src={TwitterIcon} boxSize='150px' transition='.5s' _hover={{transform:'scale(1.1)'}}/>
+                        <Image src={TwitterIcon} boxSize='min(5em, 13vw)' transition='.5s' _hover={{transform:'scale(1.1)'}}/>
                     </Link>
                 </motion.div>
 
             </motion.div>
-            <Image src={FinalWave} />
+            <Image src={FinalWave} mt='50px'/>
         </Flex>
     )
 }
